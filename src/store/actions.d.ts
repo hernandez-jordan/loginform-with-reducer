@@ -1,3 +1,8 @@
+export enum FieldNameType {
+  USERNAME = "username",
+  PASSWORD = "password",
+}
+
 export enum UserActionType {
   LOGIN = "LOGIN",
   LOGOUT = "LOGOUT",
