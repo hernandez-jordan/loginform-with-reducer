@@ -6,7 +6,7 @@ import {
   StateLogin,
   UserDispatch,
 } from "../store/index";
-import { UserActionType } from "../store/actions.d";
+import { FieldNameType, UserActionType } from "../store/actions.d";
 import Dashboard from "./Dashboard";
 
 export default function LoginForm() {
@@ -39,26 +39,26 @@ export default function LoginForm() {
             <p>Please login</p>
             <input
               type="text"
-              placeholder="username"
+              placeholder={FieldNameType.USERNAME}
               autoComplete="on"
               value={username}
               onChange={(e) =>
                 dispatch({
                   type: UserActionType.FIELD,
-                  field: "username",
+                  field: FieldNameType.USERNAME,
                   value: e.target.value,
                 })
               }
             />
             <input
               type="password"
-              placeholder="password"
+              placeholder={FieldNameType.PASSWORD}
               autoComplete="on"
               value={password}
               onChange={(e) =>
                 dispatch({
                   type: UserActionType.FIELD,
-                  field: "password",
+                  field: FieldNameType.PASSWORD,
                   value: e.target.value,
                 })
               }
